@@ -26,6 +26,7 @@
 }
 
 ::placeholder {color: #0A3871;}
+
 .txt-encriptador {
     border: none;
     color: #0A3871;
@@ -142,7 +143,7 @@
 }
 
 .pie {    
-    font-size: clamp(6px, 3vw, 14px);
+    font-size: clamp(9px, 3vw, 16px);
     color: #F3F5FC;
     background: #0A3871;
     margin: 0;
