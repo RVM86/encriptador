@@ -73,7 +73,7 @@
 }
 
 .salto {
-    color: #F3F5FC;
+    color: white;
     font-size: clamp(10px, 3vw, 16px);
     background: white;
 }
