@@ -53,7 +53,7 @@
     border: none;
     background: white;
     background-image: url(imagenes/zona-msn.PNG);
-    background-size: 100px;
+    background-size: 25%;
     background-position: bottom 10% right 5%;
     background-repeat: no-repeat; 
     color: #0A3871;
@@ -106,7 +106,7 @@
 }
 
 .boton-desencriptar {
-    background: #D8DFE8;
+    background: white;
     border: 1px solid #0A3871;
     border-radius: 18px;
     color: #0A3871;
@@ -115,28 +115,43 @@
 }
 
 .boton-copiar {
-    background: white;
-    border: 1px solid #0A3871;
+    background: #f2f3f4;
+    border: 1px solid black;
     border-radius: 18px;
-    color: #0A3871;
+    color: black;
     cursor: pointer;
     padding: 10px;
 }
 
 .boton-pegar {
-    background: white;
-    border: 1px solid #0A3871;
+    background: #f2f3f4;
+    border: 1px solid black;
     border-radius: 18px;
-    color: #0A3871;
+    color: black;
     cursor: pointer;
     padding: 10px;
 }
 
 .boton-limpiar {
     background: white;
-    border: 1px solid #0A3871;
+    border: 1px solid black;
     border-radius: 18px;
-    color: #0A3871;
+    color: black;
     cursor: pointer;
     padding: 10px;
+}
+
+.pie {    
+    font-size: clamp(6px, 3vw, 14px);
+    color: #F3F5FC;
+    background: #0A3871;
+    margin: 0;
+}
+
+.pie-pagina {
+    padding: 0.5rem;
+    text-align: center;
+    background: url(imagenes/pie-pagina.PNG);
+    border-radius: 18px;
+    margin: 1rem;
 }
