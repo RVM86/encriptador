@@ -14,38 +14,44 @@
     </head>
 
     <body>
-        <header>
-            <div class="logo-encabezado">
-                <h1><img src="imagenes/logo.png" alt="Logo Alura"></h1>
+        <main class="contenido">
+            <header>
+                <div class="logo-encabezado">
+                    <h1><img src="imagenes/logo.png" alt="Logo Alura"></h1>
+                </div>
+            </header>
+            
+            <div class="principal">                
+                <div class="zona-encriptar">
+                    <textarea class="txt-encriptador" rows="8" placeholder="Ingrese el texto aqui"></textarea>
+                    <div>
+                        <p class="informar"><img src="imagenes/informativo.png" alt="Informativo" class="img-info"> Solo letras minúsculas y sin acentos</p>
+                    </div>
+    
+                    <div class="botones">
+                        <input type="submit" value="Encriptar" class="boton-encriptar">
+                        <input type="submit" value="Desencriptar" class="boton-desencriptar">
+                    </div>
+                </div>       
+                
+                <div class="zona-mensaje">
+                    <textarea class="txt-descubierto" rows="8"></textarea>
+                    <div>
+                        <p class="salto">Es secreto!</p>
+                    </div>
+                    <div class="botones">
+                        <input type="submit" value="Copiar" class="boton-copiar">
+                        <input type="submit" value="Pegar" class="boton-pegar">
+                        <input type="submit" value="Limpiar" class="boton-limpiar">
+                    </div>
+                </div>  
             </div>
-        </header>
-        
-        <section class="izquierda">
-            <div class="txt-area">
-                <textarea class="text-area" rows="8" placeholder="Ingrese el texto aqui"></textarea>
-            </div>            
-            <div>
-                <p class="texto-informativo"><img src="imagenes/informativo.png" alt="Informativo" class="img-info"> Solo letras minúsculas y sin acentos</p>
-            </div>
-            <div class="botones">
-                <input type="submit" value="Encriptar" class="boton-encriptar">
-                <input type="submit" value="Desencriptar" class="boton-desencriptar">
-            </div>
-        </section>
-
-        <section class="derecha">
-            <div class="txt-msn">
-                <textarea class="mensaje" rows="8"></textarea>
-            </div>
-            <div class="copiar">
-                <input type="submit" value="Copiar" class="boton-copiar">
-            </div>
-        </section>
-        
-        <footer class="pie-pagina">
-            <p class="pie">| Rocío Vera | Alumna ONE | Alura LATAM |</p>
-            <img src="imagenes/detalle-pie-pagina.PNG" alt="Detalle-Estudiante">
-        </footer>
+            
+            <footer class="pie-pagina">
+                <p class="pie">| Rocío Vera | Alumna ONE | Alura LATAM |</p>
+                <img src="imagenes/detalle-pie-pagina.PNG" alt="Detalle-Estudiante">
+            </footer>
+        </main>
     </body>
 
 </html>
