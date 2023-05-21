@@ -7,7 +7,7 @@
 }
 
 .contenido {
-    margin: 1rem;
+    margin: 1.5rem;
 }
 
 .principal {
@@ -16,5 +16,127 @@
     grid-auto-rows: auto;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-auto-flow: dense;
-    margin: 1.5em;
+}
+
+.format-textarea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+}
+
+::placeholder {color: #0A3871;}
+.txt-encriptador {
+    border: none;
+    color: #0A3871;
+    resize: none;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+}
+
+.txt-encriptador:focus {outline: none;}
+
+.zona-mensaje {
+    margin: 1rem;
+    background: white;
+    border-radius: 18px;
+}
+
+.zona-encriptar {
+    margin: 1rem;
+}
+
+.txt-descubierto {
+    border-radius: 18px;
+    border: none;
+    background: white;
+    background-image: url(imagenes/zona-msn.PNG);
+    background-size: 100px;
+    background-position: bottom 10% right 5%;
+    background-repeat: no-repeat; 
+    color: #0A3871;
+    resize: none;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+}
+
+.txt-descubierto:focus {outline: none;}
+
+.informar {
+    color: #495057;
+    font-size: clamp(10px, 3vw, 16px);
+}
+
+.salto {
+    color: #F3F5FC;
+    font-size: clamp(10px, 3vw, 16px);
+    background: white;
+}
+
+.botones-encriptador {
+    display: grid;
+    gap: 15px;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+    grid-auto-flow: dense;
+    margin: 0 1rem 1rem;
+}
+
+.botones-mensaje {
+    background: white;
+    display: grid;
+    gap: 15px;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+    grid-auto-flow: dense;
+    margin: 0 1rem 1rem;
+}
+
+.boton-encriptar {
+    background: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 18px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.boton-desencriptar {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 18px;
+    color: #0A3871;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.boton-copiar {
+    background: white;
+    border: 1px solid #0A3871;
+    border-radius: 18px;
+    color: #0A3871;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.boton-pegar {
+    background: white;
+    border: 1px solid #0A3871;
+    border-radius: 18px;
+    color: #0A3871;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.boton-limpiar {
+    background: white;
+    border: 1px solid #0A3871;
+    border-radius: 18px;
+    color: #0A3871;
+    cursor: pointer;
+    padding: 10px;
 }
