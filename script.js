@@ -1,4 +1,7 @@
 const areaEncriptador = document.querySelector(".txt-encriptador");
+
+areaEncriptador.focus()
+
 const areaMensaje = document.querySelector(".txt-descubierto");
 
 var matrizCodigo = [
@@ -7,6 +10,8 @@ var matrizCodigo = [
     ["a", "ai"],
     ["o", "ober"],
     ["u", "ufat"]];
+
+console.table(matrizCodigo);
 
 function botonEncriptar(){
     const textoEncriptado = encriptar(areaEncriptador.value);
@@ -19,6 +24,16 @@ function botonDesencriptar(){
     areaMensaje.value = textoEncriptado;
     areaEncriptador.value = "";
 }
+
+function botonCopiar(){
+    const textoCopiado = copyToClipboard(areaMensaje.value);
+    areaMensaje.value = "";
+}
+
+function botonPegar(){
+    
+}
+
 
 function encriptar(encriptacion){    
     encriptacion = encriptacion.toLowerCase();
@@ -40,4 +55,22 @@ function desencriptar(_descubrir){
     return _descubrir;
 }
 
-console.table(matrizCodigo);
+const copiar = document.querySelector("#copy");
+const pegar = document.querySelector("#paste");
+console.log(copiar);
+console.log(pegar);
+
+if(copiar) {
+    copiar.addEventListener('click', () => {
+        const txt = copiar.previousElementSibling.innerText;
+        copyToClipboard(txt);
+    })
+}
+
+function copyToClipboard(txt) {
+    navigator.clipboard.writeText(txt)
+    .then(() => {
+        console.log(`${txt} se copio exitosamente`)
+    })
+    .catch((e) => { console.error(`Error al copiar: ${e}`)})
+}

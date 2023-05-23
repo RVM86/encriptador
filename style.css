@@ -28,9 +28,11 @@
 ::placeholder {color: #0A3871;}
 
 .txt-encriptador:focus, .txt-descubierto:focus {outline: none;}
+.txt-encriptador:hover {background: #ecf0fd;}
 
 .txt-encriptador {
     border: none;
+    border-radius: 18px;
     color: #0A3871;
     resize: none;
     overflow: hidden;
@@ -50,8 +52,9 @@
 }
 
 .txt-descubierto {
-    border: none;
     background: white;
+    border-radius: 18px;
+    border: none;
     background-image: url(imagenes/zona-msn.PNG);
     background-size: 25%;
     background-position: bottom 10% right 5%;
@@ -67,6 +70,7 @@
 .informar {
     color: #495057;
     font-size: clamp(10px, 3vw, 16px);
+    margin-left: 1rem;
 }
 
 .salto {
@@ -103,6 +107,8 @@
     padding: 10px;
 }
 
+.boton-encriptar:hover {background: #001a3a}
+
 .boton-desencriptar {
     background: white;
     border: 1px solid #0A3871;
@@ -112,6 +118,8 @@
     padding: 10px;
 }
 
+.boton-desencriptar:hover {background: #001a3a; color: white;}
+
 .boton-copiar, .boton-pegar {
     background: #f2f3f4;
     border: 1px solid black;
@@ -120,6 +128,8 @@
     cursor: pointer;
     padding: 10px;
 }
+
+.boton-copiar:hover, .boton-pegar:hover {background: #001a3a; color: white;}
 
 .pie {    
     font-size: clamp(8px, 3vw, 18px);
