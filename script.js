@@ -1,7 +1,7 @@
+//encriptar y desencriptar
+
 const areaEncriptador = document.querySelector(".txt-encriptador");
-
 areaEncriptador.focus()
-
 const areaMensaje = document.querySelector(".txt-descubierto");
 
 var matrizCodigo = [
@@ -17,23 +17,15 @@ function botonEncriptar(){
     const textoEncriptado = encriptar(areaEncriptador.value);
     areaMensaje.value = textoEncriptado;
     areaEncriptador.value = "";
+    areaEncriptador.focus();
 }
 
 function botonDesencriptar(){
     const textoEncriptado = desencriptar(areaEncriptador.value);
     areaMensaje.value = textoEncriptado;
     areaEncriptador.value = "";
+    areaEncriptador.focus();
 }
-
-function botonCopiar(){
-    const textoCopiado = copyToClipboard(areaMensaje.value);
-    areaMensaje.value = "";
-}
-
-function botonPegar(){
-    
-}
-
 
 function encriptar(encriptacion){    
     encriptacion = encriptacion.toLowerCase();
@@ -55,22 +47,29 @@ function desencriptar(_descubrir){
     return _descubrir;
 }
 
-const copiar = document.querySelector("#copy");
-const pegar = document.querySelector("#paste");
-console.log(copiar);
-console.log(pegar);
+// copiar, pegar, limpiar
 
-if(copiar) {
-    copiar.addEventListener('click', () => {
-        const txt = copiar.previousElementSibling.innerText;
-        copyToClipboard(txt);
+document.querySelector('.boton-copiar').addEventListener('click', function() {
+    let copyText = document.querySelector('.txt-descubierto').value;
+    navigator.clipboard.writeText(copyText)
+    .then(()=>{
+        console.log('El texto ha sido copiado');
+        alert('Mensaje en el portapapeles 👌');
+        areaMensaje.value = "";
+        areaEncriptador.focus();
     })
-}
+    .catch(() => { console.error('Error al copiar')})
+})
 
-function copyToClipboard(txt) {
-    navigator.clipboard.writeText(txt)
-    .then(() => {
-        console.log(`${txt} se copio exitosamente`)
+document.querySelector('.boton-pegar').addEventListener('click', function() {
+    navigator.clipboard.readText()
+    .then(copyText => {
+        document.querySelector('.txt-encriptador').value = copyText;
     })
-    .catch((e) => { console.error(`Error al copiar: ${e}`)})
+})
+
+function botonLimpiar(){
+    areaEncriptador.value = "";
+    areaMensaje.value = "";
+    areaEncriptador.focus();
 }

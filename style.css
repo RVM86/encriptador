@@ -118,8 +118,6 @@
     padding: 10px;
 }
 
-.boton-desencriptar:hover {background: #001a3a; color: white;}
-
 .boton-copiar, .boton-pegar {
     background: #f2f3f4;
     border: 1px solid black;
@@ -129,7 +127,18 @@
     padding: 10px;
 }
 
-.boton-copiar:hover, .boton-pegar:hover {background: #001a3a; color: white;}
+.boton-limpiar {
+    background: white;
+    border: 1px solid black;
+    border-radius: 18px;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.boton-desencriptar:hover, .boton-copiar:hover, .boton-pegar:hover, .boton-limpiar:hover {
+    background: #001a3a; color: white;
+}
 
 .pie {    
     font-size: clamp(8px, 3vw, 18px);
