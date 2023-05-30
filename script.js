@@ -1,7 +1,8 @@
-//encriptar y desencriptar
+// encriptar y desencriptar
 
 const areaEncriptador = document.querySelector(".txt-encriptador");
 areaEncriptador.focus()
+
 const areaMensaje = document.querySelector(".txt-descubierto");
 
 var matrizCodigo = [
@@ -28,11 +29,12 @@ function botonDesencriptar(){
 }
 
 function encriptar(encriptacion){    
-    encriptacion = encriptacion.toLowerCase();
+    //encriptacion = encriptacion.toLowerCase();
     for(let i = 0; i < matrizCodigo.length; i++){
         if(encriptacion.includes(matrizCodigo[i][0])){
             encriptacion = encriptacion.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
         }
+    //console.log(validacion(encriptacion));
     }
     return encriptacion;
 }
@@ -72,4 +74,43 @@ function botonLimpiar(){
     areaEncriptador.value = "";
     areaMensaje.value = "";
     areaEncriptador.focus();
+}
+
+// solo minisculas, sin acentos, sin caracteres especiales
+
+const validarTxtEncrip = () => {
+    if(validacion(areaEncriptador.value)){
+        document.querySelector('.error').classList.add('error-activo');
+        document.querySelector('.alinear').classList.add('alinear-activo');
+    }
+    else{
+        document.querySelector('.error').classList.remove('error-activo');
+        document.querySelector('.alinear').classList.remove('alinear-activo');
+    }
+}
+
+areaEncriptador.addEventListener("keyup", validarTxtEncrip);
+
+function tieneMayus(elMensaje){
+    const mayus = /[A-Z]/;
+    return mayus.test(elMensaje);
+}
+
+function tieneCaracEspec(elMensaje){
+    const caracEspec = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    return caracEspec.test(elMensaje);
+}
+
+function tieneAcentos(elMensaje){
+    const acentos = /[\u00C0-\u00FF]/;
+    return acentos.test(elMensaje);
+}
+
+function validacion(elMensaje){
+    if(tieneMayus(elMensaje) || tieneCaracEspec(elMensaje) || tieneAcentos(elMensaje)) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }

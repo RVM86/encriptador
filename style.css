@@ -23,6 +23,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 18px;
+    margin-bottom: 1rem;
 }
 
 ::placeholder {color: #0A3871;}
@@ -67,10 +68,31 @@
     padding: 1rem;
 }
 
+.error {
+    display: none;
+}
+
+.error-activo {
+    display: block;
+}
+
+.alinear {
+    display: none;
+}
+
+.alinear-activo {
+    display: block;
+}
+
 .informar {
-    color: #495057;
+    color: #cd042f;
+    font-weight: bold;
     font-size: clamp(10px, 3vw, 16px);
     margin-left: 1rem;
+}
+
+.validacion-tecleado {
+    margin-right: 8px;
 }
 
 .salto {
