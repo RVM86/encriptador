@@ -35,16 +35,6 @@
                     </div>
                 </div>
 
-                <div class="zona-imagen">
-                    <section class="face">
-                        <div class="eye">
-                            <div class="pupil"></div>
-                        </div>
-                        <div class="eye">
-                            <div class="pupil"></div>
-                        </div>
-                </div>
-
                 <div class="zona-mensaje">
                     <div class="format-textarea">
                         <textarea class="txt-descubierto" rows="8"></textarea>
@@ -56,6 +46,12 @@
                         <input type="submit" value="Copiar" class="boton-copiar">
                         <input type="submit" value="Pegar" class="boton-pegar">
                         <input type="submit" value="Limpiar" onclick="botonLimpiar()" class="boton-limpiar">
+                        <div class="popup" id="popup">
+                            <img src="imagenes/tick.png">
+                            <h2>Mensaje Copiado!</h2>
+                            <p>Tal vez se necesiten permisos al portapapeles</p>
+                            <button type="button" onclick="closePopup()">OK</button>
+                        </div>
                     </div>
                 </div>
             </div>

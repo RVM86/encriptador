@@ -1,4 +1,4 @@
-// encriptar y desencriptar
+// RETO ENCRIPTAR Y DESENCRIPTAR
 
 const areaEncriptador = document.querySelector(".txt-encriptador");
 areaEncriptador.focus()
@@ -17,7 +17,10 @@ console.table(matrizCodigo);
 function botonEncriptar(){
     const textoEncriptado = encriptar(areaEncriptador.value);
     if(validacion(areaEncriptador.value)){
+        document.querySelector('.error').classList.remove('error-activo');
+        document.querySelector('.alinear').classList.remove('alinear-activo');
         areaEncriptador.value = "";
+        areaEncriptador.focus();
     }
     else{
         areaMensaje.value = textoEncriptado;
@@ -54,19 +57,34 @@ function desencriptar(_descubrir){
     return _descubrir;
 }
 
-// copiar, pegar, limpiar
+// RETO PARA UTILIZAR BOTONES QUE REALICEN LAS SIGUIENTES ACCIONES: COPIAR, PEGAR, LIMPIAR
+
+// Boton copiar
+
+let popup = document.getElementById("popup");
+
+function closePopup(){
+    popup.classList.remove("open-popup");
+    areaEncriptador.focus();
+}
 
 document.querySelector('.boton-copiar').addEventListener('click', function() {
     let copyText = document.querySelector('.txt-descubierto').value;
-    navigator.clipboard.writeText(copyText)
-    .then(()=>{
-        console.log('El texto ha sido copiado');
-        alert('Mensaje en el portapapeles 👌');
-        areaMensaje.value = "";
-        areaEncriptador.focus();
-    })
-    .catch(() => { console.error('Error al copiar')})
+    if(copyText == ""){
+        closePopup();
+    }
+    else{
+        navigator.clipboard.writeText(copyText)
+        .then(()=>{
+            //console.log('El texto ha sido copiado');
+            popup.classList.add("open-popup");
+            areaMensaje.value = "";
+        })
+        .catch(() => { console.error('Error al copiar')})
+    }
 })
+
+// Boton pegar
 
 document.querySelector('.boton-pegar').addEventListener('click', function() {
     navigator.clipboard.readText()
@@ -75,13 +93,17 @@ document.querySelector('.boton-pegar').addEventListener('click', function() {
     })
 })
 
+// Boton limpiar
+
 function botonLimpiar(){
+    document.querySelector('.error').classList.remove('error-activo');
+    document.querySelector('.alinear').classList.remove('alinear-activo');
     areaEncriptador.value = "";
     areaMensaje.value = "";
     areaEncriptador.focus();
 }
 
-// solo minisculas, sin acentos, sin caracteres especiales
+// RETO NO SE ACEPTAN MAYUSCULAS, ACENTOS, NI CARACTERES ESPECIALES
 
 const validarTxtEncrip = () => {
     if(validacion(areaEncriptador.value)){
@@ -119,28 +141,3 @@ function validacion(elMensaje){
         return false;
     }
 }
-
-// imagen
-
-const handleMouseMove = (e) => {
-    const { clientX, clientY } = e;
-    console.log({ clientX, clientY});
-
-    const { innerWidth, innerHeight } = window;
-    const fractionX = clientX / innerWidth;
-    const fractionY = clientY / innerHeight;
-
-    console.log({ fractionX, fractionY });
-
-    const pupilX = -33 + fractionX * 66;
-    const pupilY = -33 + fractionY * 66;
-
-    console.log({ pupilX, pupilY });
-
-    document.querySelectorAll('.pupil')
-    .forEach(el => {
-        el.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
-    })
-}
-
-window.addEventListener('mousemove', handleMouseMove);
