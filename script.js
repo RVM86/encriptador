@@ -16,9 +16,14 @@ console.table(matrizCodigo);
 
 function botonEncriptar(){
     const textoEncriptado = encriptar(areaEncriptador.value);
-    areaMensaje.value = textoEncriptado;
-    areaEncriptador.value = "";
-    areaEncriptador.focus();
+    if(validacion(areaEncriptador.value)){
+        areaEncriptador.value = "";
+    }
+    else{
+        areaMensaje.value = textoEncriptado;
+        areaEncriptador.value = "";
+        areaEncriptador.focus();
+    }
 }
 
 function botonDesencriptar(){
@@ -114,3 +119,28 @@ function validacion(elMensaje){
         return false;
     }
 }
+
+// imagen
+
+const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    console.log({ clientX, clientY});
+
+    const { innerWidth, innerHeight } = window;
+    const fractionX = clientX / innerWidth;
+    const fractionY = clientY / innerHeight;
+
+    console.log({ fractionX, fractionY });
+
+    const pupilX = -33 + fractionX * 66;
+    const pupilY = -33 + fractionY * 66;
+
+    console.log({ pupilX, pupilY });
+
+    document.querySelectorAll('.pupil')
+    .forEach(el => {
+        el.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+    })
+}
+
+window.addEventListener('mousemove', handleMouseMove);

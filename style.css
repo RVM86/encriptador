@@ -56,10 +56,6 @@
     background: white;
     border-radius: 18px;
     border: none;
-    background-image: url(imagenes/zona-msn.PNG);
-    background-size: 25%;
-    background-position: bottom 10% right 5%;
-    background-repeat: no-repeat; 
     color: #0A3871;
     resize: none;
     overflow: hidden;
@@ -175,4 +171,39 @@
     background: url(imagenes/pie-pagina.PNG);
     border-radius: 18px;
     margin: 1rem;
+}
+
+.zona-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.face {
+    display: flex;
+    justify-content: center;
+    width: 12rem;
+    height: 12rem;
+    background: #0A3871;
+    border-radius: 50%;
+}
+
+.eye {
+    display: inline-flex;
+    width: 4.4rem;
+    height: 4.4rem;
+    background: white;
+    border-radius: 50%;
+    margin: 22% 2% 0 2%;
+    overflow: hidden;
+}
+
+.pupil {
+    display: inline-flex;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: black;
+    border-radius: 50%;
+    margin: 37% 37% 0 37%;
 }
