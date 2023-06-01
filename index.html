@@ -23,7 +23,7 @@
             <div class="principal">
                 <div class="zona-encriptar">
                     <div class="format-textarea">
-                        <textarea class="txt-encriptador" placeholder="Ingrese el texto aqui" rows="8"></textarea>
+                        <textarea class="txt-encriptador" placeholder="Ingrese el texto aqui" rows="12"></textarea>
                     </div>
                     <div class="error">
                         <p class="informar"><i class="validacion-tecleado fas fa-times-circle"></i>Favor de escribir sin mayúsculas, sin caracteres especiales y sin acentos.</p>
@@ -37,7 +37,7 @@
 
                 <div class="zona-mensaje">
                     <div class="format-textarea">
-                        <textarea class="txt-descubierto" rows="8"></textarea>
+                        <textarea class="txt-descubierto" rows="12"></textarea>
                     </div>
                     <div class="alinear">
                         <p class="salto">Esta división es una parte secreta que ha sido creado con fines especificos</p>
@@ -48,10 +48,20 @@
                         <input type="submit" value="Limpiar" onclick="botonLimpiar()" class="boton-limpiar">
                         <div class="popup" id="popup">
                             <img src="imagenes/tick.png">
-                            <h2>Mensaje Copiado!</h2>
-                            <p>Tal vez se necesiten permisos al portapapeles</p>
+                            <h2>Mensaje Copiado</h2>
+                            <p>Se pueden requerir permisos al portapapeles</p>
                             <button type="button" onclick="closePopup()">OK</button>
                         </div>
+                    </div>
+                    <div class="zona-imagen" id="zona-imagen">
+                        <section class="face">
+                            <div class="eye">
+                                <div class="pupil"></div>
+                            </div>
+                            <div class="eye">
+                                <div class="pupil"></div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>

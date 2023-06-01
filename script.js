@@ -25,6 +25,7 @@ function botonEncriptar(){
     else{
         areaMensaje.value = textoEncriptado;
         areaEncriptador.value = "";
+        closeZonaImagen();
         areaEncriptador.focus();
     }
 }
@@ -56,6 +57,7 @@ function desencriptar(_descubrir){
     }
     return _descubrir;
 }
+
 
 // RETO PARA UTILIZAR BOTONES QUE REALICEN LAS SIGUIENTES ACCIONES: COPIAR, PEGAR, LIMPIAR
 
@@ -100,8 +102,10 @@ function botonLimpiar(){
     document.querySelector('.alinear').classList.remove('alinear-activo');
     areaEncriptador.value = "";
     areaMensaje.value = "";
+    openZonaImagen();
     areaEncriptador.focus();
 }
+
 
 // RETO NO SE ACEPTAN MAYUSCULAS, ACENTOS, NI CARACTERES ESPECIALES
 
@@ -140,4 +144,40 @@ function validacion(elMensaje){
     else {
         return false;
     }
+}
+
+
+// ANIMACION
+
+const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    console.log({ clientX, clientY});
+
+    const { innerWidth, innerHeight } = window;
+    const fractionX = clientX / innerWidth;
+    const fractionY = clientY / innerHeight;
+
+    console.log({ fractionX, fractionY });
+
+    const pupilX = -20 + fractionX * 40;
+    const pupilY = -20 + fractionY * 40;
+
+    console.log({ pupilX, pupilY });
+
+    document.querySelectorAll('.pupil')
+    .forEach(el => {
+        el.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+    })
+}
+
+window.addEventListener('mousemove', handleMouseMove);
+
+let zonaImagen = document.getElementById("zona-imagen");
+
+function closeZonaImagen(){
+    zonaImagen.classList.add("close-zona-imagen");
+}
+
+function openZonaImagen(){
+    zonaImagen.classList.remove("close-zona-imagen");
 }
