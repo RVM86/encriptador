@@ -1,7 +1,5 @@
 # Challenge ONE Sprint 01: Construye un encriptador de texto con Javascript
-
-Nota de ayuda: Quise agregar un poco de animación con un emoji, pero la boca no logré hacerla responsive.
-Se ha logrado cumplir con los puntos solicitados:
+Quise agregar un poco de animación además de cumplir con los puntos solicitados:
 
   Trabajar una aplicación que encripta textos, para intercambiar mensajes secretos con otras personas.
 
