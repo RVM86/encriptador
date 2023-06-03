@@ -15,18 +15,31 @@
     <body>
         <main class="contenido">
             <header>
-                <div>
-                    <h1><img src="./imagenes/logo.png" alt="Logo Alura"></h1>
+                <div class="zona-imagen" id="zona-imagen">
+                    <div class="caja">
+                        <div class="face"></div>
+                        <div class="ojos">
+                            <div class="eye">
+                                <div class="pupil"></div>
+                            </div>
+                            <div class="eye">
+                                <div class="pupil"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zona-logo">
+                    <img src="./imagenes/logo.png" alt="Logo Alura" class="logo-alura">
                 </div>
             </header>
             
             <div class="principal">
                 <div class="zona-encriptar">
                     <div class="format-textarea">
-                        <textarea class="txt-encriptador" placeholder="Ingrese el texto aqui" rows="12"></textarea>
+                        <textarea class="txt-encriptador" placeholder="Ingrese el texto aqui" rows="9"></textarea>
                     </div>
                     <div class="error">
-                        <p class="informar"><i class="validacion-tecleado fas fa-times-circle"></i>Favor de escribir sin mayúsculas, sin caracteres especiales y sin acentos.</p>
+                        <p class="informar"><i class="validacion-tecleado fas fa-times-circle"></i>Sin mayúsculas, sin caracteres especiales y sin acentos.</p>
                     </div>
     
                     <div class="botones-encriptador">
@@ -37,10 +50,10 @@
 
                 <div class="zona-mensaje">
                     <div class="format-textarea">
-                        <textarea class="txt-descubierto" rows="12"></textarea>
+                        <textarea class="txt-descubierto" rows="9"></textarea>
                     </div>
                     <div class="alinear">
-                        <p class="salto">Esta división es una parte secreta que ha sido creado con fines especificos</p>
+                        <p class="salto">Esta división es una parte secreta creada con fines especificos</p>
                     </div>
                     <div class="botones-mensaje">
                         <input type="submit" value="Copiar" class="boton-copiar">
@@ -52,16 +65,6 @@
                             <p>Se pueden requerir permisos al portapapeles</p>
                             <button type="button" onclick="closePopup()">OK</button>
                         </div>
-                    </div>
-                    <div class="zona-imagen" id="zona-imagen">
-                        <section class="face">
-                            <div class="eye">
-                                <div class="pupil"></div>
-                            </div>
-                            <div class="eye">
-                                <div class="pupil"></div>
-                            </div>
-                        </section>
                     </div>
                 </div>
             </div>

@@ -6,8 +6,102 @@
     font-size: clamp(10px, 3vw, 24px);
 }
 
-header div {
-    margin: 2rem 0 0 2rem;
+header {
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-auto-flow: dense;
+}
+
+.zona-logo {
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.logo-alura {
+    margin-right: 1rem;
+}
+
+.zona-imagen {
+    margin: 1rem;
+    background: transparent;
+    transition: transform 0.5s;
+}
+
+.close-zona-imagen {
+    visibility: hidden;
+}
+
+.caja {
+    margin-left: 1rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 18px;
+    background: #d4dfeb94;
+    box-shadow: 1px 1px 9px 2px #90a4ba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face:before {
+    margin-top: 45%;
+    content: "";
+    width: 40%;
+    height: 20%;
+    background: #0A3871;
+    opacity: 0.9;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    transition: 0.05s;
+}
+
+.face:hover:before {
+    margin-top: 45%;
+    width: 40%;
+    height: 5%;
+    background: #0A3871;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.ojos { 
+    background: transparent;
+    margin-bottom: 25%;
+}
+
+.eye {
+    display: inline-flex;
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 1.5px 0 1.5px;
+}
+
+.pupil {
+    display: inline-flex;
+    width: 23%;
+    height: 23%;
+    background: #0A3871;
+    border-radius: 50%;
+    margin: 35% 35% 0 35%;
+    transform: translate(-75%, -75%);
 }
 
 .principal {
@@ -227,72 +321,4 @@ header div {
     font-size: clamp(6px, 2vw, 15px);
     background: white;
     color: #0A3871;
-}
-
-.zona-imagen {
-    position: absolute;
-    top: 30%;
-    left: 69%;
-    transform: translate(-75%, -75%);
-    text-align: center;
-    padding: 0 30px 30px;
-    background: transparent;
-    transition: transform 0.5s;
-}
-
-.close-zona-imagen {
-    visibility: hidden;
-    transform: translate(-75%, -75%);
-}
-
-.face {
-    position: absolute;
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    background: #d4dfeb94;
-    box-shadow: 1px 1px 20px 9px #90a4ba;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.face:before {
-    content: "";
-    position: absolute;
-    top: 128px;
-    width: 40%;
-    height: 20%;
-    background: #0A3871;
-    border-bottom-left-radius: 70px;
-    border-bottom-right-radius: 70px;
-    transition: 0.05s;
-}
-
-.face:hover:before {
-    top: 138px;
-    width: 40%;
-    height: 5%;
-    background: #0A3871;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-.eye {
-    display: inline-flex;
-    width: 3rem;
-    height: 3rem;
-    background: white;
-    border-radius: 50%;
-    margin: -20% 2% 0 2%;
-    overflow: hidden;
-}
-
-.pupil {
-    display: inline-flex;
-    width: 23%;
-    height: 23%;
-    background: #0A3871;
-    border-radius: 50%;
-    margin: 35% 35% 0 35%;
 }

@@ -149,6 +149,7 @@ function validacion(elMensaje){
 
 // ANIMACION
 
+// movimiento ojos
 const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
     console.log({ clientX, clientY});
@@ -159,8 +160,8 @@ const handleMouseMove = (e) => {
 
     console.log({ fractionX, fractionY });
 
-    const pupilX = -20 + fractionX * 40;
-    const pupilY = -20 + fractionY * 40;
+    const pupilX = -6 + fractionX * 22;
+    const pupilY = -6 + fractionY * 30;
 
     console.log({ pupilX, pupilY });
 
@@ -172,6 +173,7 @@ const handleMouseMove = (e) => {
 
 window.addEventListener('mousemove', handleMouseMove);
 
+// ocultar imagen
 let zonaImagen = document.getElementById("zona-imagen");
 
 function closeZonaImagen(){
