@@ -174,12 +174,12 @@ const handleMouseMove = (e) => {
 window.addEventListener('mousemove', handleMouseMove);
 
 // ocultar imagen
-let zonaImagen = document.getElementById("zona-imagen");
+//let zonaImagen = document.getElementById("zona-imagen");
 
-function closeZonaImagen(){
-    zonaImagen.classList.add("close-zona-imagen");
-}
+//function closeZonaImagen(){
+    //zonaImagen.classList.add("close-zona-imagen");
+//}
 
-function openZonaImagen(){
-    zonaImagen.classList.remove("close-zona-imagen");
-}
+//function openZonaImagen(){
+    //zonaImagen.classList.remove("close-zona-imagen");
+//}
