@@ -12,7 +12,7 @@ var matrizCodigo = [
     ["o", "ober"],
     ["u", "ufat"]];
 
-console.table(matrizCodigo);
+//console.table(matrizCodigo);
 
 function botonEncriptar(){
     const textoEncriptado = encriptar(areaEncriptador.value);
@@ -152,18 +152,18 @@ function validacion(elMensaje){
 // movimiento ojos
 const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
-    console.log({ clientX, clientY});
+    //console.log({ clientX, clientY});
 
     const { innerWidth, innerHeight } = window;
     const fractionX = clientX / innerWidth;
     const fractionY = clientY / innerHeight;
 
-    console.log({ fractionX, fractionY });
+    //console.log({ fractionX, fractionY });
 
     const pupilX = -6 + fractionX * 22;
     const pupilY = -6 + fractionY * 30;
 
-    console.log({ pupilX, pupilY });
+    //console.log({ pupilX, pupilY });
 
     document.querySelectorAll('.pupil')
     .forEach(el => {
