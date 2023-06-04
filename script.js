@@ -128,7 +128,7 @@ function tieneMayus(elMensaje){
 }
 
 function tieneCaracEspec(elMensaje){
-    const caracEspec = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    const caracEspec = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?¿~]/;
     return caracEspec.test(elMensaje);
 }
 
